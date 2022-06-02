@@ -1,0 +1,450 @@
+/*----- GENERAL -----*/
+
+*{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+h2{
+  font-size: 2em;
+}
+h3{
+  font-size: 1.7em;
+}
+p{
+  font-size: 1.5em;
+}
+ul{
+  list-style: none;
+  font-size: 1em;
+}
+li{
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  margin: 0; 
+}
+
+button {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 10px 40px;
+  border: 2px solid rgba(0,0,0,.5);
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+  color: white;
+  background-color: #3774C4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/*----- NAV -----*/
+.nav__img-container {
+  display: none;
+}
+
+.nav {
+  background-color: #3774C4;
+}
+
+.nav__ul {
+  display: none;
+  margin: 0;
+}
+
+.nav__responsive-ul{
+  margin: 0;
+  padding: 0;
+}
+
+.nav__li-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__li-container li{
+  font-size: 18px;
+  margin: 6px 10px;
+}
+
+.nav__responsive-li a{
+  color: #fff;
+}
+
+/*----- SECCION SOBRE MI -----*/
+
+#sobre-mi .container {
+  text-align: center;
+  margin-top: 0;
+  height: auto;
+}
+
+.sobre-mi-img-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.sobre-mi-img-container img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-top: 50px;
+}
+
+#boton-contactar {
+  margin: 10px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px #000;
+}
+
+#sobre-mi h3{
+  margin: 10px;
+  color: #3774C4;
+}
+
+.info-de-mi span {
+  color: #3774C4;
+}
+
+.estudios__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.lenguajes {
+  font-weight: bold;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-name: colorchange;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorchange {
+  from {
+    color: #3774C4;
+  }
+
+  
+  50% {
+    color: #f22;
+  }
+  
+  to {
+    color: #3774C4;
+  }
+}
+
+/* ----- SECCIÓN CUALIDADES Y CONOCIMIENTOS ------- */
+
+#cualidades-y-conocimientos{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #eee;
+}
+
+.titulo-cualidades-y-conocimientos {
+  display: none;
+}
+
+
+.titulo-y-cualidades-container-img-container img{
+  border-radius: 10px;
+  width: 350px;
+  height: 250px;
+  margin-top: 20px;
+}
+
+.img-container p{
+  margin-bottom: 0%;
+}
+
+#cualidades-y-conocimientos h2{
+  color: #3774C4;
+}
+
+
+#cualidades-y-conocimientos h3{
+  margin-bottom: 0;
+}
+
+#cualidades-y-conocimientos ul{
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
+#cualidades-y-conocimientos p{
+  margin-top: 0;
+}
+
+/*----- EXPERIENCIA LABORAL -----*/
+
+#experiencia-laboral{
+  display: flex;
+  text-align: center;
+}
+
+#experiencia-laboral h2{
+  color: #3774C4;
+}
+
+/*----- SECCION CONTACTO -----*/
+
+.contacto__ul-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: center;
+}
+
+.contacto__ul-container li{
+  font-size: 20px;
+  text-align: center;
+  margin: 15px;
+}
+
+.contacto__ul-container i{
+  padding: 15px;
+  color: #3774C4;
+}
+
+.contacto__ul-li a:hover{
+  color: #3774C4;
+}
+
+.contacto__ul-li a:visited {
+  color: #000;
+}
+/*----- FOOTER ------*/
+
+footer {
+  font-size: 14px;
+  text-align: center;
+  margin-right: 10px;
+  align-items: flex-end;
+  background-color: #ddd;
+}
+
+footer p {
+  margin: 0;
+}
+
+/*---------------------ESTILOS TABLET -------------------*/
+
+@media screen and (min-width: 980px) {
+  #sobre-mi .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 100px;
+    margin-top: 40px;
+  }
+
+  .sobre-mi-img-container {
+    margin: 0 100px 25px 150px;
+  }
+
+  button {
+    display: none;
+  }
+  
+
+  /*----- NAV -----*/
+
+  header {
+    position: fixed;
+    width: 100%;
+  }
+
+  .nav__responsive-ul {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .nav__ul {
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+  }
+
+  .nav__img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .nav__img-container img{
+    height: 50px;
+    width: 50px;
+    margin: 0 0 0 40px;
+    padding: 2px;
+    border-radius: 50%;
+  }
+
+  .nav__img-container a {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .nav__img-container i {
+    margin: 2px 4px 0 4px;
+  }
+
+  .nav__ul a{
+    font-size: 20px;
+    margin: 5px 20px;
+    color: #fff;
+  }
+
+  /*----- SECCION CUALIDADESY  CONOCIMIENTOS -----*/
+
+  .titulo-cualidades-y-conocimientos {
+    display: block;
+  }
+
+  .titulo__culaidades-mobile{
+    display: none;
+  }
+
+  .titulo_conocimientos-mobile {
+    display: none;
+  }
+
+  .titulo-y-cualidades-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .titulo-y-cualidades-container-img-container {
+    margin-top: 25px;
+  }
+
+  .titulo-y-cualidades-container-img-container span {
+    font-size: 17px;
+  }
+
+  .cualidades-y-conocimientos-container-texto {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+
+  .container_ul ul{
+    padding: 0;
+    min-width: 166px;
+  }
+
+  .conocimientos__container {
+    max-width: 700px;
+    margin: 0 0 0 50px;
+
+  }
+
+  .cualidades-y-conocimientos-container-texto {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+  
+  .conocimientos__text-container h3 {
+    margin-top: 26.560px;
+  }
+
+  .conocimientos__text-container-idiomas {
+    max-width: 300px;
+    text-align: left;
+  }
+
+  .conocimientos__text-container-matematicos {
+    max-width: 300px;
+    text-align: left;
+  }
+
+  .conocimientos__text-container-informaticos {
+    margin: auto;
+    max-width: 350px;
+    text-align: left;
+  }
+
+  #contacto {
+    height: auto;
+  }
+
+  .contacto__ul-li{
+    max-width: 250px;
+  }
+}
+
+
+
+
+/*-----------------------ESTLOSPARA PC--------------------*/
+
+@media screen and (min-width: 749px) {
+
+
+  /*----- SECCION SOBRE MI -----*/
+
+  #sobre-mi {
+    padding: 40px;
+  }
+ 
+  .estudios__container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+  }
+
+  .estudios__primarios {
+    margin: auto;
+    max-width: 300px;
+  }
+
+  .estudios__secundarios {
+    margin: auto;
+    max-width: 300px;
+  }
+
+
+}
