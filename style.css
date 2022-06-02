@@ -1,5 +1,4 @@
-
-/*------------------------- GENERAL -----------------------*/
+/*----- GENERAL -----*/
 
 *{
   box-sizing: border-box;
@@ -14,27 +13,33 @@ body {
   margin: 0;
 }
 
-h1{
-  font-size: 3.5em;
-}
 h2{
-  font-size: 2.3em;
+  font-size: 2em;
 }
 h3{
-  font-size: 2em;
+  font-size: 1.7em;
 }
 p{
   font-size: 1.5em;
 }
 ul{
   list-style: none;
+  font-size: 1em;
 }
 li{
-  font-size: 1.25em;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  margin: 0; 
 }
 
 button {
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: bold;
   padding: 10px 40px;
   border: 2px solid rgba(0,0,0,.5);
@@ -44,153 +49,112 @@ button {
   background-color: #3774C4;
 }
 
-/*----- NAV -----*/
-
-button:hover{
-  background-color: #2C5892;
-}
-
-.container{
+.container {
   max-width: 1200px;
   margin: auto;
 }
 
-#maiten {
-  display: none;
-  height: 60px;
-  width: 60px;
-  border-radius: 30px;
-}
-
-header{
-  background-color: rgb(220, 220, 220);
-}
-
-header .container{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-}
-
-header nav{
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  padding-bottom: 20px;
-  margin-left: 30px;
-}
-
-header a{
-  padding: 5px 12px;
-  text-decoration: none;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-}
-
-header a:hover{
-  color: #3774C4;
-}
-
-#boton-contactame {
+/*----- NAV -----*/
+.nav__img-container {
   display: none;
 }
 
-/*----- SECCIÓN HERO -----*/
+.nav {
+  background-color: #3774C4;
+}
 
-#hero{
+.nav__ul {
+  display: none;
+  margin: 0;
+}
+
+.nav__responsive-ul{
+  margin: 0;
+  padding: 0;
+}
+
+.nav__li-container {
   display: flex;
+  flex-direction: row;
+  text-align: center;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  height: 90vh;
-  background-image: linear-gradient(
-    0deg,
-    rgba(0,0,0,.5),
-    rgba(0,0,0,.5)
-  )
-  ,url("Imágenes/estudiante.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 
-#hero h1{
-  color: rgb(255, 255, 255);
+.nav__li-container li{
+  font-size: 18px;
+  margin: 6px 10px;
 }
 
-.color-name {
-  color: #3774C4;
+.nav__responsive-li a{
+  color: #fff;
 }
 
-/* SEGUNDA SECCIÓN */
+/*----- SECCION SOBRE MI -----*/
 
 #sobre-mi .container {
   text-align: center;
-  padding: 120px 12px 200PX 12PX;
   margin-top: 0;
+  height: auto;
 }
 
-/*----- SECCIÓN EXPERIENCIA LABORAL -----*/
-
-#experiencia-laboral {
-  background-color: rgb(30, 30, 30);
-  color: white;
+.sobre-mi-img-container {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  height: 950px;
+  align-items: center;
+}
+.sobre-mi-img-container img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-top: 50px;
 }
 
-#experiencia-laboral .container {
-  padding: 80px 12px 150px 12px;
+#boton-contactar {
+  margin: 10px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px #000;
 }
 
-
-#experiencia-laboral h2{
-  margin-top: 0;
+#sobre-mi h3{
+  margin: 10px;
+  color: #3774C4;
 }
 
-#experiencia-laboral p{
-  display: none;
+.info-de-mi span {
+  color: #3774C4;
 }
 
-#boton-info-metalurfica:hover h2{
-  display: block;  
+.estudios__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-#experiencia-laboral .carta {
-  background-size: cover;
-  background-position: center center;
-  border-radius: 15px;
-  padding: 30px 0;
-  margin: 20px;
+.lenguajes {
+  font-weight: bold;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-name: colorchange;
+  animation-iteration-count: infinite;
 }
 
-.carta:first-child{
-  background-image: linear-gradient(
-    0deg,
-    rgba(0,0,0,.5),
-    rgba(0,0,0,.5)
-  )
-  ,url("Imágenes/metalurgico.jpg");
-}
+@keyframes colorchange {
+  from {
+    color: #3774C4;
+  }
 
-.carta:nth-child(2) {
-  background-image: linear-gradient(
-    0deg,
-    rgba(0,0,0,.5),
-    rgba(0,0,0,.5)
-  )
-  ,url("Imágenes/mozo.jpg");
-}
-
-.carta:nth-child(3) {
-  background-image: linear-gradient(
-    0deg,
-    rgba(0,0,0,.5),
-    rgba(0,0,0,.5)
-  )
-  ,url("Imágenes/vendedor.jpg");
+  
+  50% {
+    color: #f22;
+  }
+  
+  to {
+    color: #3774C4;
+  }
 }
 
 /* ----- SECCIÓN CUALIDADES Y CONOCIMIENTOS ------- */
@@ -198,253 +162,289 @@ header a:hover{
 #cualidades-y-conocimientos{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  height: 100vh;
+  background-color: #eee;
 }
 
-#cualidades-y-conocimientos .container{
-  text-align: center;
+.titulo-cualidades-y-conocimientos {
+  display: none;
 }
 
 
-#cualidades-y-conocimientos li{
-  font-weight: bold;
+.titulo-y-cualidades-container-img-container img{
+  border-radius: 10px;
+  width: 350px;
+  height: 250px;
+  margin-top: 20px;
+}
+
+.img-container p{
+  margin-bottom: 0%;
 }
 
 #cualidades-y-conocimientos h2{
   color: #3774C4;
 }
 
-/*----- SECCIÓN CONTACTO -----*/
 
-#contacto {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#cualidades-y-conocimientos h3{
+  margin-bottom: 0;
+}
+
+#cualidades-y-conocimientos ul{
+  font-size: 1.5em;
   text-align: center;
-  color: white;
-  background-image: linear-gradient(
-    0deg,
-    rgba(0,0,0,.5),
-    rgba(0,0,0,.5)
-  )
-  ,url("Imágenes/contacto.jpg");
-  background-size: cover;
-  background-position: center center;
 }
 
-#contacto ul {
-  border: 3px solid white;
+
+#cualidades-y-conocimientos p{
+  margin-top: 0;
+}
+
+/*----- EXPERIENCIA LABORAL -----*/
+
+#experiencia-laboral{
+  display: flex;
+  text-align: center;
+}
+
+#experiencia-laboral h2{
+  color: #3774C4;
+}
+
+/*----- SECCION CONTACTO -----*/
+
+.contacto__ul-container {
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
+  justify-content: center;
 }
 
-#mail {
-  margin: 30px
+.contacto__ul-container li{
+  font-size: 20px;
+  text-align: center;
+  margin: 15px;
 }
 
-#celular {
-  margin: 30px;
+.contacto__ul-container i{
+  padding: 15px;
+  color: #3774C4;
 }
 
-#imagen-contacto {
-  display: none;
+.contacto__ul-li a:hover{
+  color: #3774C4;
 }
 
-/*----- FOOTER GENERAL ------*/
+.contacto__ul-li a:visited {
+  color: #000;
+}
+/*----- FOOTER ------*/
 
 footer {
-  background-color: rgb(220, 220, 220);
-}
-
-footer p{
-  font-size: 20px;
-  margin: 0;
-  padding: 12px;
-  color: rgb(100, 100, 100)
-}
-
-footer .container {
-  height: 40px;
-  display: flex;
-  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+  margin-right: 10px;
   align-items: flex-end;
+  background-color: #ddd;
 }
 
-/*---------------------------------------------------------- RESPONSIVE SECCIÓN --------------------------------------------------------------*/
-
-@media (min-width: 400px) {
-  #maiten {
-    display: block;
-  }
+footer p {
+  margin: 0;
 }
 
-@media (min-width: 720px){
-  
-  /*----- NAV ------*/
-  
-  .logo {
+/*---------------------ESTILOS TABLET -------------------*/
+
+@media screen and (min-width: 980px) {
+  #sobre-mi .container{
     display: flex;
     flex-direction: row;
-    text-align: center;
-    align-items: center;
-  }
-
-  .logo i{
-    text-align: center; 
-    padding-right: 15px;
-  }
-
-  #boton-contactame {
-    display: block;
-    margin-left: 0;
-    padding-top:px;
-    align-items: center;
-    text-align: center;
-  }
-  
-  #maiten {
-    display: block;
-    padding: 5px;
-    height: 60px;
-    width: 60px;
-    border-radius: 30px;
-    margin-left: 100px;
-    margin-right: 0;
-  }
-
-  header {
-    width: 100%;
-    position: fixed;
-
-  }
-
-  header .container{
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  header nav {
-    flex-direction: row;
-    padding-bottom: 0;
-    padding-left: 50px;
-  }
-
-  /*----- SECCIÓN SOBRE MI ------*/
-
-  #sobre-mi {
-    justify-content: top;
-  }
-
-  #sobre-mi .container {
-    display: flex; 
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0;
+    margin-bottom: 100px;
+    margin-top: 40px;
   }
 
-  #sobre-mi .info-de-mi {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 90px;
-    width: 50%;
-    max-width: 600px;
+  .sobre-mi-img-container {
+    margin: 0 100px 25px 150px;
   }
 
-  #sobre-mi .img-container {
-    background-image: url(Imágenes/Maiten-Oviedo.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 500px;
-    width: 500px;
-    border-radius: 300px;
-  }
-
-  /*----- SECCIÓN EXPERIENCIA LABORAL ------*/
-  
-  #experiencia-laboral {
-    height: auto;
-  }
-
-  #experiencia-laboral .trabajos {
-    display: flex;
-    justify-content: center;
-  }
-
-  #experiencia-laboral p{
-    display: block;
-  }
-
-  #expericia-laboral h3{
-    margin-top: 0;
-  }
-
-  #experiencia-laboral .carta {
-    padding: 15px;
-    margin-bottom: 30px;
-  }
-  
-  .carta button{
+  button {
     display: none;
   }
   
-  
-  /*----- SECCIÓN CUALIDADES Y CONOCIMIENTOS -----*/
-  
-  #cualidades-y-conocimientos .img-container{
-    background-image: url("Imágenes/conocimientos.png");
-    background-size: cover;
-    background-position: center center;
-    width: 420px;
-    height: 310px;
+
+  /*----- NAV -----*/
+
+  header {
+    position: fixed;
+    width: 100%;
   }
 
-  #cualidades-y-conocimientos .container{
-    text-align: initial;
-    max-width: 50vw;
-    margin-left: 0;
-    margin-right: 30px;
+  .nav__responsive-ul {
+    display: none;
   }
 
-  #cualidades-y-conocimientos {
-    margin-left: 50px;
-    flex-direction: row;
+  .nav {
+    display: flex;
   }
 
-  /*----- SECCIÓN CONTACTO -----*/
-
-  #contacto ul {
-    font-size: 20px;
-    width: 600px;
-    height: 400px;
-    border: 5px solid white;
-    display: block;
-    padding-top: 85px;
-    align-items: center;
+  .nav__ul {
+    display: flex;
+    justify-content: right;
     text-align: center;
-  }
-  
-  #mail {
-    margin: 30px
-  }
-  
-  #celular {
-    margin: 30px;
+    align-items: center;
+    width: 100%;
+    height: 3em;
   }
 
+  .nav__img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .nav__img-container img{
+    height: 50px;
+    width: 50px;
+    margin: 0 0 0 40px;
+    padding: 2px;
+    border-radius: 50%;
+  }
+
+  .nav__img-container a {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .nav__img-container i {
+    margin: 2px 4px 0 4px;
+  }
+
+  .nav__ul a{
+    font-size: 20px;
+    margin: 5px 20px;
+    color: #fff;
+  }
+
+  /*----- SECCION CUALIDADESY  CONOCIMIENTOS -----*/
+
+  .titulo-cualidades-y-conocimientos {
+    display: block;
+  }
+
+  .titulo__culaidades-mobile{
+    display: none;
+  }
+
+  .titulo_conocimientos-mobile {
+    display: none;
+  }
+
+  .titulo-y-cualidades-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .titulo-y-cualidades-container-img-container {
+    margin-top: 25px;
+  }
+
+  .titulo-y-cualidades-container-img-container span {
+    font-size: 17px;
+  }
+
+  .cualidades-y-conocimientos-container-texto {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+
+  .container_ul ul{
+    padding: 0;
+    min-width: 166px;
+  }
+
+  .conocimientos__container {
+    max-width: 700px;
+    margin: 0 0 0 50px;
+
+  }
+
+  .cualidades-y-conocimientos-container-texto {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+  
+  .conocimientos__text-container h3 {
+    margin-top: 26.560px;
+  }
+
+  .conocimientos__text-container-idiomas {
+    max-width: 300px;
+    text-align: left;
+  }
+
+  .conocimientos__text-container-matematicos {
+    max-width: 300px;
+    text-align: left;
+  }
+
+  .conocimientos__text-container-informaticos {
+    margin: auto;
+    max-width: 350px;
+    text-align: left;
+  }
+
+  #contacto {
+    height: auto;
+  }
+
+  .contacto__ul-li{
+    max-width: 250px;
+  }
 }
 
-@media (min-width: 838px){
-  .logo i{
-    text-align: center; 
-    padding: 0;
+
+
+
+/*-----------------------ESTLOSPARA PC--------------------*/
+
+@media screen and (min-width: 749px) {
+
+
+  /*----- SECCION SOBRE MI -----*/
+
+  #sobre-mi {
+    padding: 40px;
+  }
+ 
+  .estudios__container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
   }
 
-  #maiten {
-    display: block;
+  .estudios__primarios {
+    margin: auto;
+    max-width: 300px;
   }
+
+  .estudios__secundarios {
+    margin: auto;
+    max-width: 300px;
+  }
+
+
 }
